@@ -1,0 +1,18 @@
+// schema.prisma
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.sqlite"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Book {
+  ISBN       String  @id
+  Title      String
+  Author     String
+  Year       Int
+  Publisher String
+}
